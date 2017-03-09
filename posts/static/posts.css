@@ -1,0 +1,124 @@
+/* =========
+    General
+   ========= */
+body {
+    background-color: #FBFBFB;
+    font-family: -apple-system, sans-serif;
+}
+
+h1 {
+    width: 500px;
+    margin: 35px auto 15px auto;
+}
+
+p {
+    margin: 0.5em 0em;
+    overflow-wrap: break-word;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========
+    Buttons
+   ========= */
+button, .btn {
+    margin: 0;
+    border: 1px solid #888888;
+    border-radius: 5px;
+    background-color: #EEEEEE;
+
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.btn-primary {
+    width: 100px;
+    margin: 10px 0px;
+    padding: 12.5px 2.5px;
+    align-self: flex-end;
+}
+
+.btn:hover {
+    text-decoration: none;
+}
+
+.button-delete {
+    background-color: transparent;
+    font-size: 8pt;
+    padding: 5px;
+}
+
+
+/* ======
+    Form
+   ====== */
+.form {
+    max-width: 500px;
+    margin: 5px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.form textarea {
+    height: 5em;
+    padding: 10px 15px;
+    border: 1px solid #888888;
+    border-radius: 5px;
+    resize: none;
+}
+
+.form button {
+    align-self: flex-end;
+}
+
+
+/* =======
+    Posts
+   ======= */
+#post-list{
+    width: 500px;
+    margin: 5px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.post {
+    background-color: #fdfdfd;
+    border: 1px solid #888888;
+    border-radius: 5px;
+
+    box-sizing: border-box;
+    width: 500px;
+    margin: 2.5px auto;
+    padding: 15px 15px;
+    opacity: 100;
+    transition: opacity 500ms ease-in;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.post-head {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+
+}
+
+.post a {
+    float: right;
+}
+
+.new-post {
+    opacity: 0;
+}

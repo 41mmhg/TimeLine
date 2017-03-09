@@ -1,0 +1,10 @@
+
+.DS_Store
+*.pyc
+/posts/static/jquery/*
+/posts/static/normalize.css
+/posts/__pychache__
+*_auto*
+*.sqlite3
+*.log
+local_settings.py

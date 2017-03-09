@@ -1,0 +1,10 @@
+        <div class="post new-post" id="{{ post.postId }}">
+            <div class="post-head">
+                <span>Author:</span>
+                <button class="button-delete">╳</button>
+            </div>
+            <p>{{ post.text }}</p>
+            <div class="post-detail">
+                <a href="/post/{{ post.postId }}">{{ post.createdTime|date:"Y-m-d H:i" }}</a>
+            </div>
+        </div>

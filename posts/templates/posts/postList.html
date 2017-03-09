@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <!-- No Cache to force refresh while testing -->
+    <meta http-equiv="cache-control" content="no-cache">
+    <title>TimeLine</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/static/normalize.css">
+    <link rel="stylesheet" href="/static/posts.css">
+
+    <!-- Scripts -->
+    <script src="/static/jquery/dist/jquery.js"></script>
+    <script src="/static/posts.js"></script>
+</head>
+
+<body>
+    <h1>TimeLine</h1>
+
+    <!-- Form for posting -->
+    {% csrf_token %}
+    <div>
+        <form class="form">
+            <textarea type="text" name="text" class="textfield" placeholder="Send a Message" required autofocus></textarea>
+            <button class="btn-primary">POST</button>
+        </form>
+    </div>
+
+    <div id="post-list">
+        {% for post in postList %}
+        <div class="post" id="{{ post.postId }}">
+            <div class="post-head">
+                <!-- Placeholder author -->
+                <span>Author:</span>
+                <button class="button-delete">╳</button>
+            </div>
+            <p>{{ post.text }}</p>
+            <div class="post-detail">
+                <a href="/post/{{ post.postId }}">{{ post.createdTime|date:"Y-m-d H:i" }}</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+</body>
+</html>
